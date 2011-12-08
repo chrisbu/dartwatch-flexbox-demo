@@ -1,0 +1,67 @@
+html, body {
+  /* force to fill 100% width + height. */
+
+  width:100%;
+  height:100%;
+  margin: 0px;
+  padding:0px;
+}
+
+body {
+  display: -webkit-box;          /* this is a flexbox parent */
+  -webkit-box-orient:horizontal; /* align children (#page) horiz */  
+}
+
+
+
+#page { 
+   /* flebox parent, but also a child of body */
+  
+  -webkit-box-flex:1;            /* as a child, this will autosize */
+  
+  display: -webkit-box;          /* this is a flexbox parent */
+  -webkit-box-orient:vertical;   /* children will align horiz */
+  
+}
+
+
+#center {
+  /* flexbox parent, but also a child of #page */
+
+  background-color: yellow;
+  
+  -webkit-box-flex: 1;             /* as a child, this will autosize */
+  
+  display: -webkit-box;            /* this is a flexbox parent */
+  -webkit-box-orient: horizontal;  /* children will align horiz */
+  
+   
+  height:100%;
+}
+
+#left {
+  /* flexbox child of #center */
+  
+  background-color: green;
+  width: 200px;                    /* Keep the size static */
+}
+
+#right {
+  /* flexbox child of #center */ 
+  
+  background-color: grey;
+  -webkit-box-flex: 1;             /* This tells it to autosize  */
+}
+
+
+
+header {
+  background-color: red;
+  display : block;                 /* note, block display */
+}
+
+
+footer {
+  display:block;
+  background-color: blue;          /* note, block display */  
+}
